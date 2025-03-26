@@ -1,0 +1,385 @@
+/* sets general formatting for the entire page */
+html, body
+{
+	margin: 0px;
+	border:0px;
+	padding: 0px;
+	height: 100%;
+	background-image:('images/background.png');
+	font-family: verdana;
+	text-align:justify;
+}
+/* creates a header for the web page*/
+#header{
+    border-style:solid;
+    border-width:4px;
+    border-color:#359BBD;
+    padding:10px;
+    margin:5px;
+    margin-left:25px;
+    background-color:#ECF9F8;
+    width:90%;
+    
+}
+/* creates date for the web page */
+label {
+    display: inline-block;
+     color: #359BBD;
+    font-weight:bold;
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    }
+       
+#spanDate {
+    font-weight: bold;
+    color: #359BBD;
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    font-family: 'Fira Sans', sans-serif;
+    }
+    
+#dayDisplay {
+            font-weight: bold;
+            color: #359BBD;
+            font-size: 25px;
+            position: relative;
+            top: 10px;
+            right: 5px;
+            padding-left: 10px;
+        }
+
+        #spanDate {
+            font-weight: bold;
+            color: #359BBD;
+            font-size: 25px;
+            position: relative;
+            top: 10px;
+            right: 5px;
+        }
+  
+  
+  input,
+  label {
+    margin: 0.4rem 0;
+  }
+/* sets date prompt */
+  p {
+    display: block;
+    font:
+      .5rem 'Fira Sans',
+      sans-serif;
+  }
+
+
+/* creates genenic div for alignment purposes */
+div.posts {
+    font-family: 'Fira Code';
+    display:inline-block;
+    
+}
+div.postses {
+    font-family: 'Fira Code';
+    position:relative;
+    float:right;
+}
+form#marq{
+    color:#359BBD;
+}
+input.poster{
+color:#0006A2; font-size: 25px; font-weight: bold;
+}
+/* creates format for image to change on hover 
+.logo {
+   background-image: url('../images/ty3v8_sml.png');
+   background-repeat: no-repeat;
+   height: 125px;
+   width: 211px;
+   margin-left:25px;   
+}
+
+.logo:hover {
+   background-image: url('../images/ty3v8bw_sml.png');
+}
+*/
+
+/* creates format for image to change on hover */
+.logo {
+   background-image: url('../images/ty3TechLtdsml.png');
+   background-repeat: no-repeat;
+   height: 125px;
+   width: 311px;
+   margin-left:25px;   
+}
+
+.logo:hover {
+     background-image: url('../images/ty3v8bw_sml.png');
+}
+/*
+.logo:hover {
+    background-image: url('../images/Ty3TECH_Circlesml.png');
+}
+*/
+
+/* creates holder for ty3 tech image*/
+#ty3techimg {
+    background-image: url('../images/ty3tech.png');
+   background-repeat: no-repeat;
+   height: auto;
+   width: auto;
+   display:inline-block;
+    
+}
+
+/* creates horizontal drop down menu */
+.menu{
+    border-style:none;
+    padding:10px;
+    margin-left:10px;
+    float:left;
+}    
+    .nav ul {list-style:none; margin:0; padding:0}
+    .nav li {float:left; width:135px; background-color:#359BBD; text-align:center;
+         border-right:1px solid white; position:relative;
+         height:30px; line-height:30px;}
+.nav li ul li {float:none; width:150px; text-align:left; padding-left:5px;
+         border-top:1px solid white;}
+.nav a {text-decoration:none; color:white;}
+.nav li ul {position:absolute; top:30px; left:0; visibility:hidden;}
+.nav li:hover ul {visibility:visible;}
+
+.nav li:hover {background-color:#C5CCEB;}
+
+/* creates content container for pages*/
+.content{
+    
+    border-style:none;
+    border-width:1px;
+    border-color:#359BBD;
+    padding:10px;
+    margin:5px;
+    margin-left:5px;
+    background-color:#ECF9F8;
+    width:100%;
+}
+
+
+/* creates format for vertical menu bar 
+Code snippet via http://www.c-sharpcorner.com/ */
+#divMenu, ul, li, li li {
+    margin: 0;
+    padding: 0;
+}
+ 
+#divMenu {
+    width: 150px;
+    height: 27px;
+}
+ 
+#divMenu ul
+{
+     line-height: 25px;
+}
+ 
+    #divMenu li {
+        list-style: none;
+        position: relative;
+        background: #359BBD;
+    }
+ 
+        #divMenu li li {
+            list-style: none;
+            position: relative;
+            background: #359BBD;
+            left: 148px;
+            top: -27px;
+        }
+ 
+ 
+    #divMenu ul li a {
+        width: 148px;
+        height: 25px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-family: Georgia,'Times New Roman',serif;
+        color:#ffffff;
+        border:1px solid #eee;
+    }
+ 
+    #divMenu ul ul {
+        position: absolute;
+        visibility: hidden;
+        top: 27px;
+    }
+ 
+    #divMenu ul li:hover ul {
+        visibility: visible;
+    }
+ 
+    #divMenu li:hover {
+        background-color: #C5CCEB;
+    }
+ 
+    #divMenu ul li:hover ul li a:hover {
+        background-color: #C5CCEB;
+    }
+ 
+    #divMenu a:hover {
+        font-weight: bold;
+    }
+
+/* creates format for digital clock */
+.clockStyle { 
+        background-color:#000; 
+        border:#999 2px inset;
+        padding:6px;
+        color:#0FF;
+        font-family:"Arial Black", Gadget, sans-serif;
+        font-size:16px;
+        font-weight:bold;
+        letter-spacing: 2px;
+        float:left;
+        width:auto;
+} 
+
+#welc {
+  color:#359BBD;
+}
+    
+    
+/*creates dropdown for exchange rates*/
+
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 110px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            float: right;
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .dropdown-btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #1557b0;
+        }
+
+        .dropdown-btn:after {
+            content: '▼';
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        .rate-item {
+            color: #333;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rate-item:last-child {
+            border-bottom: none;
+        }
+
+        .rate-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        #last-updated {
+            text-align: left;
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        div.clb{
+            clear: both;
+        }
+        div.cla{
+            clear: all;
+        }
+        .holiday-btn {
+            background-color: #124281;
+            color: #ebd40bef;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float:right
+        }
+
+        .search-btn {
+                    background-color: #225a01;
+                    color:  #ebd40bef;
+                    padding: 12px;
+                    border: none;
+                    cursor: pointer;
+                    width: 20%;
+                    text-align: left;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    float:right 
+                }

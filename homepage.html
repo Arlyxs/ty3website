@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TY3 Tech</title>
+  <link rel="stylesheet" href="Ty3CSS/Ty3CSS.css" type="text/css" />
+  <script type="text/javascript" src="Ty3JS/Ty3JS.js"> </script>
+</head>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+
+</head>
+
+<body>
+
+  <!-- creates header for the site with image -->
+  <div id="header">
+
+    <div class="posts">
+      <div class="logo" />
+    </div>
+
+    <div class="posts">
+      <!-- adds facebook link to the company's page-->
+      <a href="https://www.facebook.com/aleix.culture">
+        <img title="Facebook" alt="Facebook" src="images/facebook-128.png" width="35" height="35" />
+      </a>
+    </div>
+
+    <!-- ceates navigation menu for the site code credit w3schools http://www.w3schools.com/css/css_dropdowns.asp-->
+    <div class="menu">
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <!--creates drop down menu for articles-->
+          <li>
+            <a href="AboutUs.html">About Us</a>
+            <ul>
+              <li>
+                <a href="AboutUS.html#Direc" onclick="popup()">Directors</a>
+              </li>
+              <li>
+                <a href="AboutUS.html#Logo" onclick="popup()">Logo</a>
+              </li>
+            </ul>
+          </li>
+          <!--li about us ends-->
+          <li>
+            <a href="index.html">Dashboards</a>
+          </li>
+          <li>
+            <a href="index.html">Products</a>
+          </li>
+          <li>
+            <a href="index.html">Services</a>
+          </li>
+          <li>
+            <a href="index.html">Clients</a>
+          </li>
+          <li>
+            <a href="index.html">Partners</a>
+          </li>
+        </ul>
+      </div>
+      <!--div class nav ends-->
+    </div>
+    <!--div class menu ends-->
+    <div class="" clb" />
+  </div>
+  <!--div class header ends-->
+
+  <!-- ceates page content container-->
+  <div class="content">
+
+    <!--creates a digital clock Display-->
+    <div id="clockDisplay" class="clockStyle"></div>
+
+    <script
+      type="text/JavaScript"> function renderTime() { var currentTime = new Date(); var diem = "AM"; var h = currentTime.getHours(); var m = currentTime.getMinutes(); var s = currentTime.getSeconds(); setTimeout('renderTime()',1000); if (h == 0) { h = 12; } else if (h > 12) { h = h - 12; diem="PM"; } if (h < 10) { h = "0" + h; } if (m < 10) { m = "0" + m; } if (s < 10) { s = "0" + s; } var myClock = document.getElementById('clockDisplay'); myClock.textContent = h + ":" + m + ":" + s + " " + diem; myClock.innerText = h + ":" + m + ":" + s + " " + diem; } renderTime(); </script>
+
+
+    <h1 id="welc">
+      Welcome to TY3 TECH
+    </h1>
+
+    <!--creates side vertical navigation menu Code snippet via http://www.c-sharpcorner.com/ -->
+    <div id="divMenu">
+      <ul>
+        <li><a href="index.html">Home</a> </li>
+
+        <li><a href="#">Background</a>
+          <ul>
+            <li><a href="AboutUs.html">AboutUs</a></li>
+            <li><a href="AboutUS.html#Direc">Directors</a></li>
+            <li><a href="AboutUS.html#Logo">Logo</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Our Clients</a>
+          <ul>
+            <li><a href="#">Listing</a></li>
+            <li><a href="#">Industry</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Case Studies</a>
+          <ul>
+            <li><a href="#">Client 1</a></li>
+            <li><a href="#">Client 2</a></li>
+            <li><a href="#">Client 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div> <!--div id divMenu ends-->
+
+    <!--creates content space for scrolling text-->
+    <div class="postses" ;>
+      <form id="marq" action="" name="marquee1">
+        <fieldset>
+          <legend>TY3 News</legend>
+          <label>name: <input type="text" name="text" size="50"
+              value=" business dahboards.  offline.  online.  login to better decision making.  " /></label>
+        </fieldset>
+      </form>
+
+      <script type="text/JavaScript">
+                      <!-- 
+          /*Text box marquee by Dave Methvin,
+          Windows Magazine
+          May be used/modified if credit line is
+          retained*/
+          ScrollSpeed = 120
+          ScrollChars = 1
+          function ScrollMarquee() {
+          window.setTimeout('ScrollMarquee()',ScrollSpeed);
+
+          var msg = document.marquee1.text.value; 
+          document.marquee1.text.value =
+          msg.substring(ScrollChars) +
+          msg.substring(0,ScrollChars); 
+          } 
+          ScrollMarquee()
+          //-->
+        </script>
+    </div> <!--div class posts ends-->
+  </div>
+  <!--div class content ends-->
+</body>
+
+</html>

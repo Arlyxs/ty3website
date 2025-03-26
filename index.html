@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TY3 Tech</title>
+    <link rel="stylesheet" href="Ty3CSS/Ty3CSS.css" type="text/css">
+    <script type="text/javascript" src="Ty3JS/Ty3JS.js"></script>
+    <style>
+        #dayDisplay {
+            font-weight: bold;
+            color: #359BBD;
+            font-size: 25px;
+            position: relative;
+            top: 10px;
+            right: 5px;
+            padding-left: 10px;
+        }
+
+        #spanDate {
+            font-weight: bold;
+            color: #359BBD;
+            font-size: 25px;
+            position: relative;
+            top: 10px;
+            right: 5px;
+        }
+
+        /* New styles for exchange rates */
+        #exchangeRates {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #359BBD;
+        }
+
+        .rate {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- creates header for the site with image -->
+    <div id="header">
+        <div class="posts">
+            <div class="logo"></div>
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="dropdown-btn">
+                    View Exchange Rates
+                </button>
+                <div id="ratesDropdown" class="dropdown-content">
+                    <div class="rate-item" id="usd-rate">Loading...</div>
+                    <div class="rate-item" id="gbp-rate">Loading...</div>
+                    <div class="rate-item" id="eur-rate">Loading...</div>
+                    <div id="last-updated"></div>
+                </div>
+            </div>
+        </div><!--div class container ends-->
+    </div>
+
+    <!-- creates page content container-->
+    <div class="content">
+        <!--creates a dynamic digital date display-->
+        <!--creates a digital clock Display-->
+        <div id="clockDisplay" class="clockStyle"></div>
+        <!-- Day display -->
+        <span id="dayDisplay"></span>
+        <span id="spanDate"></span>
+        <!-- search button creation-->
+        <a href="https://mail.google.com/" target="popup"
+            onclick="window.open('http://www.google.com','popup','width=1000,height=600'); return false;">
+            <button type="button" class="search-btn">Goo_Search</button>
+        </a>
+        <!-- New exchange rates display -->
+    </div>
+
+    <!--creates content space for scrolling text--> <!-- holiday calendar button creation-->
+    <div class="posts">
+        <form action="" name="marquee1">
+            <fieldset>
+                <legend>TY3 Cues</legend>
+                <label for="scrollingText">Scrolling Text Content <a
+                        href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
+                        target="popup"
+                        onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
+                        <button type="button" class="holiday-btn">Goo_Holidays</button>
+                    </a></label>
+                <input id="scrollingText" class="poster" type="text" name="text" size="50"
+                    title="Scrolling text display" placeholder="Enter scrolling text content"
+                    aria-label="Scrolling text content"
+                    value=" Data Structuring.  IoT_programming.  IoT_Networks.  IoT_Security.   AI_prompt engineering.   AI_Localization.  Ty3TECHLtd.|_|_|_|_| Data_Communications_Technology.|_|_|_|_| Intelligence-driven human-machine decision making_____.....(:dreamincode:)....._____    " />
+            </fieldset>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        // Day display
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const today = new Date();
+        document.getElementById("dayDisplay").innerHTML = days[today.getDay()];
+
+        // Date display
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+            'August', 'September', 'October', 'November', 'December'];
+        const tomorrow = new Date();
+        tomorrow.setTime(tomorrow.getTime() + (1000 * 3600 * 24));
+        document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
+
+        // Clock display
+        function renderTime() {
+            const currentTime = new Date();
+            let diem = "AM";
+            let h = currentTime.getHours();
+            let m = currentTime.getMinutes();
+            let s = currentTime.getSeconds();
+
+            if (h === 0) {
+                h = 12;
+            } else if (h > 12) {
+                h = h - 12;
+                diem = "PM";
+            }
+
+            if (h < 10) { h = "0" + h; }
+            if (m < 10) { m = "0" + m; }
+            if (s < 10) { s = "0" + s; }
+
+            const myClock = document.getElementById('clockDisplay');
+            const timeString = `${h}:${m}:${s} ${diem}`;
+            myClock.textContent = timeString;
+            myClock.innerText = timeString;
+
+            setTimeout(renderTime, 1000);
+        }
+        renderTime();
+
+        // Marquee scroll
+        const ScrollSpeed = 100;
+        const ScrollChars = 1;
+        function ScrollMarquee() {
+            window.setTimeout(ScrollMarquee, ScrollSpeed);
+            const msg = document.marquee1.text.value;
+            document.marquee1.text.value = msg.substring(ScrollChars) + msg.substring(0, ScrollChars);
+        }
+        ScrollMarquee();
+
+        // Add new function for exchange rates
+
+        function toggleDropdown() {
+            document.getElementById("ratesDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        async function updateExchangeRates() {
+            try {
+                const response = await fetch('https://api.exchangerate-api.com/v4/latest/TTD');
+                const data = await response.json();
+
+                // Calculate how many TTD are needed for 1 unit of each currency
+                const ttdToUsd = (1 / data.rates.USD * data.rates.TTD).toFixed(2);
+                const ttdToGbp = (1 / data.rates.GBP * data.rates.TTD).toFixed(2);
+                const ttdToEur = (1 / data.rates.EUR * data.rates.TTD).toFixed(2);
+
+                // Update the display with the new format
+                document.getElementById('usd-rate').innerHTML =
+                    `<span class="rate-value">${ttdToUsd} TTD</span> = 1 USD`;
+                document.getElementById('gbp-rate').innerHTML =
+                    `<span class="rate-value">${ttdToGbp} TTD</span> = 1 GBP`;
+                document.getElementById('eur-rate').innerHTML =
+                    `<span class="rate-value">${ttdToEur} TTD</span> = 1 EUR`;
+
+                const now = new Date();
+                document.getElementById('last-updated').textContent =
+                    `Last updated: ${now.toLocaleTimeString()}`;
+            } catch (error) {
+                console.error('Error fetching exchange rates:', error);
+                document.getElementById('usd-rate').textContent = 'Error loading rates';
+                document.getElementById('gbp-rate').textContent = 'Error loading rates';
+                document.getElementById('eur-rate').textContent = 'Error loading rates';
+                document.getElementById('last-updated').textContent =
+                    'Failed to update rates';
+            }
+        }
+
+        // Initial update
+        updateExchangeRates();
+
+        // Update rates every hour
+        setInterval(updateExchangeRates, 3600000);
+    </script>
+</body>
+
+</html>
