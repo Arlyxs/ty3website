@@ -76,99 +76,103 @@
         <!-- search button creation-->
         <a href="https://mail.google.com/" target="popup"
             onclick="window.open('http://www.google.com','popup','width=1000,height=600'); return false;">
-            <button type="button" class="search-btn">Goo_Search</button>
+            <button type="button" class="gmail-btn"><img src="images/Gmail.png" id=Gmail
+                    alt="Gmail image Image"></button>
         </a>
-        <!-- New exchange rates display -->
-    </div>
+        <!--creates gemini AI link-->
+        <a href="https://gemini.google.com/app" target="popup"
+            onclick="window.open('https://gemini.google.com/?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all&authuser=0','popup','width=1000,height=600'); return false;">
+            <button type="button" class="gemini-btn"> <img src="images/Gemini.png" id=gemini alt="gemini Image">
+            </button>
+        </a>
 
-    <!--creates content space for scrolling text--> <!-- holiday calendar button creation-->
-    <div class="posts">
-        <form action="" name="marquee1">
-            <fieldset>
-                <legend>TY3 Cues</legend>
-                <label for="scrollingText">Scrolling Text Content <a
-                        href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
-                        target="popup"
-                        onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
-                        <button type="button" class="holiday-btn">Goo_Holidays</button>
-                    </a></label>
-                <input id="scrollingText" class="poster" type="text" name="text" size="50"
-                    title="Scrolling text display" placeholder="Enter scrolling text content"
-                    aria-label="Scrolling text content"
-                    value=" Data Structuring.  IoT_programming.  IoT_Networks.  IoT_Security.   AI_prompt engineering.   AI_Localization.  Ty3TECHLtd.|_|_|_|_| Data_Communications_Technology.|_|_|_|_| Intelligence-driven decision making_____.....(:dreamincode:)....._____    " />
-            </fieldset>
-        </form>
-    </div>
-    <a href="gnome-calculator">calc</a>
-    <script type="text/javascript">
-        // Day display
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const today = new Date();
-        document.getElementById("dayDisplay").innerHTML = days[today.getDay()];
+        <div class="posts">
+            <form action="" name="marquee1">
+                <fieldset>
+                    <legend>TY3 Cues</legend>
+                    <label for="scrollingText">Scrolling Text Content <a
+                            href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
+                            target="popup"
+                            onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
+                            <button type="button" class="holiday-btn">Trini_Holidays</button>
+                        </a></label>
+                    <input id="scrollingText" class="poster" type="text" name="text" size="50"
+                        title="Scrolling text display" placeholder="Enter scrolling text content"
+                        aria-label="Scrolling text content"
+                        value=" Data Structuring.  IoT_programming.  IoT_Networks.  IoT_Security.   AI_prompt engineering.   AI_Localization.  Ty3TECHLtd.|_|_|_|_| Data_Communications_Technology.|_|_|_|_| Intelligence-driven human-machine decision making_____.....(:dreamincode:)....._____    " />
+                </fieldset>
+            </form>
+        </div>
 
-        // Date display
-        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
-            'August', 'September', 'October', 'November', 'December'];
-        const tomorrow = new Date();
-        tomorrow.setTime(tomorrow.getTime() + (1000 * 3600 * 24));
-        document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
+        <script type="text/javascript">
+            // Day display
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const today = new Date();
+            document.getElementById("dayDisplay").innerHTML = days[today.getDay()];
 
-        // Clock display
-        function renderTime() {
-            const currentTime = new Date();
-            let diem = "AM";
-            let h = currentTime.getHours();
-            let m = currentTime.getMinutes();
-            let s = currentTime.getSeconds();
+            // Date display
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                'August', 'September', 'October', 'November', 'December'];
+            const tomorrow = new Date();
+            tomorrow.setTime(tomorrow.getTime() + (1000 * 3600 * 24));
+            document.getElementById("spanDate").innerHTML = months[tomorrow.getMonth()] + " " + tomorrow.getDate() + ", " + tomorrow.getFullYear();
 
-            if (h === 0) {
-                h = 12;
-            } else if (h > 12) {
-                h = h - 12;
-                diem = "PM";
+            // Clock display
+            function renderTime() {
+                const currentTime = new Date();
+                let diem = "AM";
+                let h = currentTime.getHours();
+                let m = currentTime.getMinutes();
+                let s = currentTime.getSeconds();
+
+                if (h === 0) {
+                    h = 12;
+                } else if (h > 12) {
+                    h = h - 12;
+                    diem = "PM";
+                }
+
+                if (h < 10) { h = "0" + h; }
+                if (m < 10) { m = "0" + m; }
+                if (s < 10) { s = "0" + s; }
+
+                const myClock = document.getElementById('clockDisplay');
+                const timeString = `${h}:${m}:${s} ${diem}`;
+                myClock.textContent = timeString;
+                myClock.innerText = timeString;
+
+                setTimeout(renderTime, 1000);
+            }
+            renderTime();
+
+            // Marquee scroll
+            const ScrollSpeed = 100;
+            const ScrollChars = 1;
+            function ScrollMarquee() {
+                window.setTimeout(ScrollMarquee, ScrollSpeed);
+                const msg = document.marquee1.text.value;
+                document.marquee1.text.value = msg.substring(ScrollChars) + msg.substring(0, ScrollChars);
+            }
+            ScrollMarquee();
+
+            // Add new function for exchange rates
+
+            function toggleDropdown() {
+                document.getElementById("ratesDropdown").classList.toggle("show");
             }
 
-            if (h < 10) { h = "0" + h; }
-            if (m < 10) { m = "0" + m; }
-            if (s < 10) { s = "0" + s; }
-
-            const myClock = document.getElementById('clockDisplay');
-            const timeString = `${h}:${m}:${s} ${diem}`;
-            myClock.textContent = timeString;
-            myClock.innerText = timeString;
-
-            setTimeout(renderTime, 1000);
-        }
-        renderTime();
-
-        // Marquee scroll
-        const ScrollSpeed = 100;
-        const ScrollChars = 1;
-        function ScrollMarquee() {
-            window.setTimeout(ScrollMarquee, ScrollSpeed);
-            const msg = document.marquee1.text.value;
-            document.marquee1.text.value = msg.substring(ScrollChars) + msg.substring(0, ScrollChars);
-        }
-        ScrollMarquee();
-
-        // Add new function for exchange rates
-
-        function toggleDropdown() {
-            document.getElementById("ratesDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropdown-btn')) {
-                const dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropdown-btn')) {
+                    const dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
                     }
                 }
             }
-
 
             async function updateExchangeRates() {
                 try {
@@ -206,7 +210,7 @@
 
             // Update rates every hour
             setInterval(updateExchangeRates, 3600000);
-    </script>
+        </script>
 </body>
 
 </html>

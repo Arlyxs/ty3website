@@ -31,37 +31,29 @@ label {
     top: 10px;
     right: 5px;
     }
-       
-#spanDate {
-    font-weight: bold;
-    color: #359BBD;
-    font-size: 25px;
-    position: relative;
-    top: 10px;
-    right: 5px;
-    font-family: 'Fira Sans', sans-serif;
-    }
     
 #dayDisplay {
             font-weight: bold;
             color: #359BBD;
-            font-size: 25px;
+            font-size: 20px;
             position: relative;
             top: 10px;
             right: 5px;
-            padding-left: 10px;
+            padding-left: 5px;
+            font-family: 'Fira Sans', sans-serif;
         }
 
-        #spanDate {
-            font-weight: bold;
-            color: #359BBD;
-            font-size: 25px;
-            position: relative;
-            top: 10px;
-            right: 5px;
-        }
-  
-  
+#spanDate {
+        font-weight: bold;
+        color: #359BBD;
+        font-size: 20px;
+        position: relative;
+        top: 10px;
+        right: 5px;
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+
   input,
   label {
     margin: 0.4rem 0;
@@ -73,6 +65,15 @@ label {
       .5rem 'Fira Sans',
       sans-serif;
   }
+#gemini{
+    width: 100px; 
+    height: 25px;
+    }
+#Gmail{
+    width: 100px; 
+    height: 25px;
+    }
+
 
 
 /* creates genenic div for alignment purposes */
@@ -353,8 +354,8 @@ body {
             clear: all;
         }
         .holiday-btn {
-            background-color: #124281;
-            color: #ebd40bef;
+            background-color: #0e0775;
+            color:  #ecd60def;
             padding: 12px;
             border: none;
             cursor: pointer;
@@ -368,18 +369,33 @@ body {
             float:right
         }
 
-        .search-btn {
-                    background-color: #225a01;
-                    color:  #ebd40bef;
-                    padding: 12px;
-                    border: none;
-                    cursor: pointer;
-                    width: 20%;
-                    text-align: left;
-                    font-size: 16px;
-                    border-radius: 4px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    float:right 
-                }
+        .gmail-btn {
+            background-color: #225a01;
+            color:  #ebd40bef;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 15%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float:right
+        }
+        .gemini-btn {
+            background-color: #070246;
+            color:  #ecd60def;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 15%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float:right 
+        }
