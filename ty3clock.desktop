@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=ty3clock
+Exec=xdg-open /opt/lampp/htdocs/ty3website/index.html
+Icon=/opt/lampp/htdocs/ty3website/images/ty3-clock.svg
+Terminal=false
