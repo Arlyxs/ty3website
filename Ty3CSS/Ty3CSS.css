@@ -35,7 +35,7 @@ label {
 #dayDisplay {
             font-weight: bold;
             color: #359BBD;
-            font-size: 20px;
+            font-size: 25px;
             position: relative;
             top: 10px;
             right: 5px;
@@ -46,12 +46,26 @@ label {
 #spanDate {
         font-weight: bold;
         color: #359BBD;
-        font-size: 20px;
+        font-size: 25px;
         position: relative;
         top: 10px;
         right: 5px;
         font-family: 'Fira Sans', sans-serif;
     }
+
+ #exchangeRates {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            font-size: 18px;
+            color: #359BBD;
+        }
+
+        .rate {
+            margin: 5px 0;
+            font-weight: bold;
+        }
 
 
   input,
@@ -399,3 +413,14 @@ body {
             align-items: center;
             float:right 
         }
+
+    #ty3marq {
+    height:60px;
+    width: 60px;
+    display:inline-block;
+    padding:right 0px;
+    }
+    #leg_font{
+
+        font-size: 20px;
+    }
