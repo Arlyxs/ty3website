@@ -373,7 +373,7 @@ body {
             padding: 12px;
             border: none;
             cursor: pointer;
-            width: 25%;
+            width: auto;
             text-align: left;
             font-size: 16px;
             border-radius: 4px;
@@ -412,6 +412,22 @@ body {
             justify-content: space-between;
             align-items: center;
             float:right 
+        }
+        .leo-btn {
+            background-color: #070246;
+            color:  #ecd60def;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            width:auto;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float:right 
+            
         }
 
     #ty3marq {
