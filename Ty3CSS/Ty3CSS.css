@@ -413,16 +413,15 @@ body {
             align-items: center;
             float:right 
         }
-        .leo-btn {
+        .mdt-btn {
             background-color: #070246;
             color:  #ecd60def;
             padding: 5px;
-            border: none;
             cursor: pointer;
             width:auto;
             text-align: left;
             font-size: 16px;
-            border-radius: 4px;
+            border-radius: 1px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -439,4 +438,11 @@ body {
     #leg_font{
 
         font-size: 20px;
+    }
+    #mdt_img {
+    height:30px;
+    width: auto;
+    display:inline-block;
+    padding:right 0px;
+    border:none;
     }

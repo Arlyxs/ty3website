@@ -56,12 +56,20 @@
                 <fieldset>
                     <legend id=leg_font><img src="images/Ty3TECH_CircleA.png" id=ty3marq alt="ty3 Image">_Cues
                     </legend>
-                    <label for="scrollingText">Digital Transformations <a
-                            href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
+                    <label for="scrollingText">Digital Transformations
+                        <!--creats Ministry Digital Transformation button-->
+                        <a href="https://mdt.gov.tt/" target="popup"
+                            onclick="window.open('https://mdt.gov.tt/','popup','width=1000,height=600'); return false;">
+                            <button type="button" class="mdt-btn"><img src="images/MDT.png" id=mdt_img alt="MDT">
+                            </button>
+                        </a>
+                        <!--creatstrini holidays button-->
+                        <a href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
                             target="popup"
                             onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
                             <button type="button" class="holiday-btn">Trini_Holidays</button>
                         </a></label>
+
                     <input id="scrollingText" class="poster" type="text" name="text" size="50"
                         title="Scrolling text display" placeholder="Enter scrolling text content"
                         aria-label="Scrolling text content"
@@ -70,7 +78,6 @@
             </form>
         </div>
 
-
 </body>
 
-</html>
+</html
