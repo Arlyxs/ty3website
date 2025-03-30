@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update rates every hour
   setInterval(updateExchangeRates, 3600000);
 
-  // timezone.js
+  // timezone clock functionality
 const timeZones = {
     'london': 'Europe/London',
     'ontario': 'America/Toronto',
@@ -164,8 +164,10 @@ function updateClock(clockId, timeZone) {
 });
     
     const clock = document.getElementById(clockId);
-    clock.textContent = localTime;
-}
+    if (clock) {
+      clock.textContent = localTime;
+    }
+  }
 
 function updateAllClocks() {
     updateClock('london-clock', timeZones.london);
@@ -175,8 +177,6 @@ function updateAllClocks() {
 }
 
 // Initialize and update clocks every second
-document.addEventListener('DOMContentLoaded', () => {
-    updateAllClocks();
-    setInterval(updateAllClocks, 1000);
-}); //end of timezone js
+  updateAllClocks();
+  setInterval(updateAllClocks, 1000);
 });
