@@ -14,7 +14,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
+.container2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     /* Reduced from 1rem */
-    padding: .5rem;
+    padding: 0.5rem;
     /* Reduced from 2rem */
     background: white;
     border-radius: 5px;
@@ -54,13 +54,13 @@ body {
 }
 
 .digital-clock {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 1.25rem;
     /* Reduced from 2.5rem */
     font-weight: bold;
     color: #333;
     background: #f8f8f8;
-    padding: 0.5rem .5rem;
+    padding: 0.5rem 0.5rem;
     /* Reduced from 1rem 2rem */
     border-radius: 3px;
     /* Reduced from 5px */
@@ -98,10 +98,9 @@ h3 {
     }
 
     .digital-clock {
-        font-size: .6rem;
+        font-size: 0.6rem;
         /* Reduced from 2rem */
         min-width: 50px;
         /* Reduced from 160px */
     }
-
 }
