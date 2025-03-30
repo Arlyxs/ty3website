@@ -32,6 +32,8 @@
 
     <!-- creates page content container-->
     <div class="content">
+
+
         <!--creates a dynamic digital date display-->
         <!--creates a digital clock Display-->
         <div id="clockDisplay" class="clockStyle"></div>
@@ -51,40 +53,38 @@
             <button type="button" class="gemini-btn"> <img src="images/Gemini.png" id=gemini alt="gemini Image">
             </button>
         </a>
+    </div> <!--div class content ends-->
 
-        <div class="posts">
-            <form action="" name="marquee1">
-                <fieldset>
-                    <legend id=leg_font><img src="images/Ty3TECH_CircleA.png" id=ty3marq alt="ty3 Image">_Cues
-                    </legend>
-                    <label for="scrollingText">Digital Transformations
-                        <!--creats Ministry Digital Transformation button-->
-                        <a href="https://mdt.gov.tt/" target="popup"
-                            onclick="window.open('https://mdt.gov.tt/','popup','width=1000,height=600'); return false;">
-                            <button type="button" class="mdt-btn"><img src="images/MDT.png" id=mdt_img alt="MDT">
-                            </button>
-                        </a>
-                        <!--creatstrini holidays button-->
-                        <a href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
-                            target="popup"
-                            onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
-                            <button type="button" class="holiday-btn">Trini_Holidays</button>
-                        </a></label>
+    <div class="posts">
+        <form action="" name="marquee1">
+            <fieldset>
+                <legend id=leg_font><img src="images/Ty3TECH_CircleA.png" id=ty3marq alt="ty3 Image">_Cues
+                </legend>
+                <label for="scrollingText">Digital Transformations
+                    <!--creats Ministry Digital Transformation button-->
+                    <a href="https://mdt.gov.tt/" target="popup"
+                        onclick="window.open('https://mdt.gov.tt/','popup','width=1000,height=600'); return false;">
+                        <button type="button" class="mdt-btn"><img src="images/MDT.png" id=mdt_img alt="MDT">
+                        </button>
+                    </a>
+                    <!--creatstrini holidays button-->
+                    <a href="https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico"
+                        target="popup"
+                        onclick="window.open('https://calendar.google.com/calendar/embed?src=en.tt%23holiday%40group.v.calendar.google.com&ctz=America%2FPuerto_Rico','popup','width=1000,height=600'); return false;">
+                        <button type="button" class="holiday-btn">Trini_Holidays</button>
+                    </a></label>
 
-                    <input id="scrollingText" class="poster" type="text" name="text" size="50"
-                        title="Scrolling text display" placeholder="Enter scrolling text content"
-                        aria-label="Scrolling text content"
-                        value=" Data Structuring.  IoT_programming.  IoT_Networks.  IoT_Security.   AI_prompt engineering.   AI_Localization.  Ty3TECHLtd.|_|_|_|_| Data_Communications_Technology.|_|_|_|_| Intelligence-driven human-machine decision making_____.....(:dreamincode:)....._____    " />
-                </fieldset>
-            </form>
-        </div>
+                <input id="scrollingText" class="poster" type="text" name="text" size="50"
+                    title="Scrolling text display" placeholder="Enter scrolling text content"
+                    aria-label="Scrolling text content"
+                    value=" Data Structuring.  IoT_programming.  IoT_Networks.  IoT_Security.   AI_prompt engineering.   AI_Localization.  Ty3TECHLtd.|_|_|_|_| Data_Communications_Technology.|_|_|_|_| Intelligence-driven human-machine decision making_____.....(:dreamincode:)....._____    " />
+            </fieldset>
+        </form>
     </div>
+
     <!-- creates time zone clock displays -->
     <div class="container2">
         <div class="clock-container">
-            <div class="country-info">
-                <span class="flag"><img class="img_f" src="images/UKFlag2.png" alt="uk Flag"></span>
-            </div>
             <div class="digital-clock" id="london-clock">
                 00:00:00
             </div>
@@ -92,9 +92,6 @@
         </div>
 
         <div class="clock-container">
-            <div class="country-info">
-                <span class="flag"><img class="img_f" src="images/CanadaFlag2.png" alt="canada Flag"></span>
-            </div>
             <div class="digital-clock" id="ontario-clock">
                 00:00:00
             </div>
@@ -102,9 +99,6 @@
         </div>
 
         <div class="clock-container">
-            <div class="country-info">
-                <span class="flag"><img class="img_f" src="images/USAFlag3.png" alt="usa Flag"></span>
-            </div>
             <div class="digital-clock" id="miami-clock">
                 00:00:00
             </div>
@@ -112,17 +106,12 @@
         </div>
 
         <div class="clock-container">
-            <div class="country-info">
-                <span class="flag"><img class="img_f" src="images/ChinaFlag2.png" alt="china Flag"></span>
-            </div>
             <div class="digital-clock" id="beijing-clock">
                 00:00:00
             </div>
             <h2>Beijing 🇨🇳</h2>
         </div>
     </div>
-    <script src="timezone.js"></script>
-
 
 </body>
 
