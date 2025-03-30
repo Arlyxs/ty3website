@@ -31,7 +31,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     /* Reduced from 1rem */
-    padding: 1rem;
+    padding: .5rem;
     /* Reduced from 2rem */
     background: white;
     border-radius: 5px;
@@ -60,7 +60,7 @@ body {
     font-weight: bold;
     color: #333;
     background: #f8f8f8;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem .5rem;
     /* Reduced from 1rem 2rem */
     border-radius: 3px;
     /* Reduced from 5px */
@@ -83,6 +83,14 @@ h3 {
     color: #666;
 }
 
+.img_f {
+    width: 50px;
+    height: 50px;
+    /* Reduced from 100px */
+    border-radius: 5px;
+    /* Reduced from 10px */
+}
+
 @media (max-width: 768px) {
     .container {
         gap: 0.5rem;
@@ -90,9 +98,10 @@ h3 {
     }
 
     .digital-clock {
-        font-size: 1rem;
+        font-size: .6rem;
         /* Reduced from 2rem */
-        min-width: 80px;
+        min-width: 50px;
         /* Reduced from 160px */
     }
+
 }
