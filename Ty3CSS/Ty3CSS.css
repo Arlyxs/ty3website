@@ -496,6 +496,13 @@ div.cla {
     border-radius: 5px;
     /* Reduced from 10px */
 }
+.img_f {
+    width: auto;
+    height: 5rem;
+    /* Reduced from 100px */
+    border-radius: 5px;
+    /* Reduced from 10px */
+}
 
 /* timezone.css */
 * {
@@ -571,14 +578,6 @@ h3 {
     font-size: 0.6rem;
     /* Reduced from 1.2rem */
     color: #666;
-}
-
-.ttimg_f {
-    width: 40px;
-    height: 35px;
-    /* Reduced from 100px */
-    border-radius: 5px;
-    /* Reduced from 10px */
 }
 
 @media (max-width: 768px) {
